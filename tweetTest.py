@@ -1,8 +1,9 @@
+since_id=1396391721051721732
 while True:
-    f=open('since_id.txt','r')
+    
 
-    since_id = int(f.read())
-    f.close()
+    
+    
     try:
 
         import tweepy
@@ -111,9 +112,7 @@ while True:
 
         while True:
             since_id = check_mentions(api, since_id)
-            f= open("since_id.txt","w")
-            f.write(str(since_id))
-            f.close()
+           
             logger.info("Waiting...")
             time.sleep(5)
 
